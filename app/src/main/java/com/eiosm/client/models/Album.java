@@ -1,7 +1,11 @@
 package com.eiosm.client.models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Album {
+    @SerializedName("id")
     private int Id;
+    @SerializedName("id")
     private int MemberId;
 
     public Album(int id, int memberId){

@@ -33,7 +33,7 @@ public class ApiClient {
     public ApiClient(String apiAddress) {
 
         RequestQueue queue = Volley.newRequestQueue(_context);
-        String url = "https://www.google.com";
+        String url = "https://dataservice.eiosm.net";
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
@@ -44,7 +44,7 @@ public class ApiClient {
                     //textView.setText("That didn't work!");
                 });
 
-// Add the request to the RequestQueue.
+        // Add the request to the RequestQueue.
         queue.add(stringRequest);
     }
 }
