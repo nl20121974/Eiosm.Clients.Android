@@ -22,9 +22,8 @@ public class AlbumService {
         return _albumService;
     }
 
-    public Call<List<Album>> getAlbums(Callback<List<Album>> callback) {
-        Call<List<Album>> albumsCall = _albumService.getAlbums(callback);
+    public void getAlbums(Callback<List<Album>> callback) {
+        Call<List<Album>> albumsCall = _albumServiceClient.getAlbums();
         albumsCall.enqueue(callback);
-        return albumsCall;
     }
 }

@@ -12,7 +12,11 @@ public class AlbumListViewModel extends ViewModel {
     private MutableLiveData<List<Album>> albums;
     private AlbumRepository _albumRepository;
 
-    public AlbumListViewModel(AlbumRepository albumRepository){
+    public AlbumListViewModel(AlbumRepository albumRepository) {
         this._albumRepository = albumRepository;
+    }
+
+    public MutableLiveData<List<Album>> getAlbums() {
+        return _albumRepository.getAlbums();
     }
 }
