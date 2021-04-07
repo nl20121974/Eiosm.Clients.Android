@@ -10,21 +10,20 @@ import retrofit2.Callback;
 public class AlbumService {
 
     private static IAlbumService _albumServiceClient;
-    private static AlbumService _albumService;
+    private static AlbumService _instance;
 
     public AlbumService() {
         _albumServiceClient = RetrofitService.Create();
     }
 
     public static AlbumService getInstance() {
-        if (_albumService == null)
-            _albumService = new AlbumService();
-        return _albumService;
+        if (_instance == null)
+            _instance = new AlbumService();
+        return _instance;
     }
 
-    public Call<List<Album>> getAlbums(Callback<List<Album>> callback) {
-        Call<List<Album>> albumsCall = _albumService.getAlbums(callback);
+    public void getAlbums(Callback<List<Album>> callback) {
+        Call<List<Album>> albumsCall = _albumServiceClient.getAlbums();
         albumsCall.enqueue(callback);
-        return albumsCall;
     }
 }
