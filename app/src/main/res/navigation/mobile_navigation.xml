@@ -22,4 +22,10 @@
         android:name="com.eiosm.client.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_user_list"
+        android:name="com.eiosm.client.ui.users.UserListFragment"
+        android:label="@string/menu_user_list"
+        tools:layout="@layout/user_list_fragment" />
 </navigation>
