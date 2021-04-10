@@ -1,4 +1,4 @@
-package com.eiosm.client.viewmodels;
+package com.eiosm.client.ui.albums;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -8,11 +8,11 @@ import com.eiosm.client.repositories.AlbumRepository;
 
 import java.util.List;
 
-public class AlbumListViewModel extends ViewModel {
+public class AlbumsViewModel extends ViewModel {
     private MutableLiveData<List<Album>> _albums;
     private AlbumRepository _albumRepository;
 
-    public AlbumListViewModel(AlbumRepository albumRepository) {
+    public AlbumsViewModel(AlbumRepository albumRepository) {
         this._albumRepository = albumRepository;
     }
 
