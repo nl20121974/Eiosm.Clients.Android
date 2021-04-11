@@ -1,5 +1,6 @@
 package com.eiosm.client.services;
 
+import com.eiosm.client.helpers.RetrofitService;
 import com.eiosm.client.models.Album;
 
 import java.util.List;
@@ -13,7 +14,7 @@ public class AlbumService {
     private static AlbumService _instance;
 
     public AlbumService() {
-        _albumServiceClient = RetrofitService.Create();
+        _albumServiceClient = RetrofitService.Create(IAlbumService.class, "https://dataservice.eiosm.net");
     }
 
     public static AlbumService getInstance() {
