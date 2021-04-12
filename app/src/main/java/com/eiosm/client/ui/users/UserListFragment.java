@@ -34,5 +34,4 @@ public class UserListFragment extends Fragment {
         mViewModel = new ViewModelProvider(this).get(UserListViewModel.class);
         // TODO: Use the ViewModel
     }
-
 }
